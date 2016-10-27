@@ -79,3 +79,37 @@
   )
 
 (sum2 '(1 2 3) 0)
+
+
+;program to calculate mean of numbers in list
+
+(define (average ls)
+  (if (null? ls) 0
+      (/ (sum_list ls) (length1 ls))
+      )
+ )
+
+(average '(1 2 3))
+
+;program to find an element is a member of the given list or not.
+(define (member1 atm list)
+	(cond
+		((null? list) #f)
+		((eq? atm (car list)) #t)
+		(else (member1 atm (cdr list)))
+		)	
+)
+
+(member1 7 '(1 2 3))
+
+
+
+;program to find the mean of a list
+(define (mean_list ls)
+	(if (null? ls) 0
+	    (/ (sum_list ls) (length1 ls))
+		)
+	
+	)
+
+(mean_list '(1 2 3 4 5 7))
