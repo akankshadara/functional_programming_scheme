@@ -58,3 +58,24 @@
  )
 
 (is_palindrome '(1 2 2 1 4))
+
+
+;program to find sum of all elements of the list
+( define (sum_list ls)
+     (if(null? ls)
+           0
+     (+ (car ls)(sum_list (cdr ls)))
+         
+ )
+ )
+(sum_list(list '1 '2 '3))
+
+;list sum using tail recursion
+(define (sum2 ls acc)
+  ( if (null? ls) 
+       acc
+    (sum2 (cdr ls) (+ acc (car ls)))
+   ) 
+  )
+
+(sum2 '(1 2 3) 0)
